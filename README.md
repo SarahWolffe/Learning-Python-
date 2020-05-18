@@ -8,6 +8,7 @@ At present, this directory contains two folders for two different OER online Pyt
 The resource names and links with chapter/exercise guides are outlined below: 
 
 * Name: Automate the Boring Stuff with Python: Practical Programming for Total Beginners
+
 Link: https://automatetheboringstuff.com/
   
 * Name: How to Think Like a Computer Scientist: Learning with Python 3
