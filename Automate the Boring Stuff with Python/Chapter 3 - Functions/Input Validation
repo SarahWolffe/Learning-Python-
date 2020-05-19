@@ -6,13 +6,18 @@ In the except clause, print a message to the user saying they must enter an inte
 ----------------------------------------------------------------------------------------------------------------------------------
 
 def seq3np1(n):
-    """ Print the 3n+1 sequence from n,
-        terminating when it reaches 1.
-    """
-    while n != 1:             # provided n is not equal to 1, execute the loop body.
+    # Print the 3n+1 sequence from n, terminating when it reaches 1.
+    while n != 1:
         print(n, end=", ")
         if n % 2 == 0:        # n is even
             n = n // 2
         else:                 # n is odd
             n = n * 3 + 1
     print(n, end=".\n")
+
+try:
+    n = int(input('Please enter a number '))  
+except:
+   n = int(input('Please enter a NUMBER '))
+    
+seq3np1(n)
