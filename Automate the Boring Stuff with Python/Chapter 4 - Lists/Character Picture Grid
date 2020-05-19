@@ -1,4 +1,4 @@
-Character Picture Grid 
+Exercise: Character Picture Grid 
 
 Say you have a list of lists where each value in the inner lists is a one-character string, like this:
 
@@ -28,3 +28,25 @@ This will finish the first row, so then print a newline. Then your program shoul
 The last thing your program will print is grid[8][5].
 Also, remember to pass the end keyword argument to print() if you don’t want a newline printed automatically after each print() call.
 ------------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+grid = [['.', '.', '.', '.', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['.', 'O', 'O', 'O', 'O', 'O'],
+        ['O', 'O', 'O', 'O', 'O', '.'],
+        ['O', 'O', 'O', 'O', '.', '.'],
+        ['.', 'O', 'O', '.', '.', '.'],
+        ['.', '.', '.', '.', '.', '.']]
+
+
+x = 0
+for a in range(6):
+    y = 0 
+    for b in grid:
+        print(grid[y][x], end='')
+        y = y + 1
+    print('\n')
+    x = x + 1
