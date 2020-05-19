@@ -1,0 +1,64 @@
+Exercise: In the turtle bar chart program, what do you expect to happen if one or more of the data values in the list is negative?
+Try it out. Change the program so that when it prints the text value for the negative bars,
+it puts the text below the bottom of the bar.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+turtle.Turtle()       # Create tess and set some attributes
+turtle.pensize(3)
+
+def draw_bar(height):
+    if height >= 200:
+        turtle.color("blue", "red")
+    elif height >= 100 and height < 200:
+        turtle.color("blue", "yellow")
+    elif height >= 0 and height < 99:
+        turtle.color("blue", "green")
+    else:
+        turtle.color("blue", "pink")
+        turtle.pendown()
+        turtle.begin_fill()           # Added this line
+        turtle.left(90)
+        turtle.forward(height)
+        turtle.penup()
+        turtle.backward(15)
+        turtle.write("  "+ str(height))
+        turtle.forward(15)
+        turtle.pendown()
+        turtle.right(90)
+        turtle.forward(40)
+        turtle.right(90)
+        turtle.forward(height)
+        turtle.left(90)
+        turtle.end_fill()     # Added this line
+        turtle.penup()
+        turtle.forward(10)
+        return
+    turtle.pendown()
+    turtle.begin_fill()           # Added this line
+    turtle.left(90)
+    turtle.forward(height)
+    turtle.write("  "+ str(height))
+    turtle.right(90)
+    turtle.forward(40)
+    turtle.right(90)
+    turtle.forward(height)
+    turtle.left(90)
+    turtle.end_fill()     # Added this line
+    turtle.penup()
+    turtle.forward(10)
+
+
+xs = [-20,48,117,200,240,160,-90,260,220,-80,]
+
+for a in xs:
+
+    draw_bar(a)
+
+wn.mainloop()
