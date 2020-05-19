@@ -26,7 +26,7 @@ Chapter 4: Lists
  
 Chapter 5: Dictionaries and Structuring Data 
 
-    Three coding exercises (practice projects: Chess Dictionary Validator, Fantasy Game Inventory, List to Dictionary Function for           Fantasy Game Inventory
+    Three coding exercises (practice projects: Chess Dictionary Validator, Fantasy Game Inventory, List to Dictionary Function for Fantasy Game Inventory
  
  
 Chapter 6: Manipulating Strings 
