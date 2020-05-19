@@ -14,9 +14,7 @@ Hint: An integer number is even if number % 2 == 0, and it’s odd if number % 2
 
 
 def seq3np1(n):
-    """ Print the 3n+1 sequence from n,
-        terminating when it reaches 1.
-    """
+    # Print the 3n+1 sequence from n, terminating when it reaches 1.
     while n != 1:
         print(n, end=", ")
         if n % 2 == 0:        # n is even
@@ -24,3 +22,6 @@ def seq3np1(n):
         else:                 # n is odd
             n = n * 3 + 1
     print(n, end=".\n")
+
+n = int(input('Please enter a number ')) # input is always processed as a string, so must convert to an integer 
+seq3np1(n)
