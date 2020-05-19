@@ -1,0 +1,27 @@
+Exercise: Write a program to draw a square spiral. 
+Assume the innermost square is 20 units per side, and each successive square is 20 units bigger, per side, than the one inside it.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def draw_squares(no_squares, size):
+    for x in range(no_squares):
+        for y in range(4):
+            turtle.pendown()
+            turtle.forward(size)
+            turtle.left(90)
+        turtle.penup()
+        turtle.right(135)
+        turtle.forward(15)
+        turtle.left(135)
+        size = size + 20
+
+
+turtle_window()
+draw_squares(5, 20)
