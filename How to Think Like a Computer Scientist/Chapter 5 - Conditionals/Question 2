@@ -1,0 +1,31 @@
+Exercises: You go on a wonderful holiday (perhaps to jail, if you don’t like happy exercises) leaving on day number 3 (a Wednesday).
+You return home after 137 sleeps. Write a general version of the program which asks for the starting day number,
+and the length of your stay, and it will tell you the name of day of the week you will return on.
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+start_day = int(input('What is the starting day number of your holiday? '))
+length = int(input('What is the length of your stay? '))
+number = (length + start_day) % 7
+
+def weekdays(number):
+    if number == 0:
+        return 'Monday'
+    elif number == 1:
+        return 'Tuesday'
+    elif number == 2:
+        return 'Wednesday'
+    elif number == 3:
+        return 'Thursday'
+    elif number == 4:
+        return 'Friday'
+    elif number == 5:
+        return 'Saturday'
+    else:
+        number == 6
+        return 'Sunday'
+
+
+print('Your return day is ' + str(weekdays(number)))
+
