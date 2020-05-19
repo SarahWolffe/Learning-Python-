@@ -1,0 +1,26 @@
+Exercise: Extend your program for question 9. 
+Draw five stars, but between each, pick up the pen, move forward by 350 units, turn right by 144, put the pen down, and draw the next star.
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def star(length, angle):
+    for i in range(5):
+        turtle.forward(length)
+        turtle.left(angle)
+
+for x in range(5):
+    turtle.pendown()
+    star(100, 144)
+    #turtle.penup()
+    turtle.forward(350)
+    turtle.left(144)
+    turtle.pendown
+    
+    
