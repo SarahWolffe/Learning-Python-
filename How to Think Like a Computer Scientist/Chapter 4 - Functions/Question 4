@@ -1,0 +1,25 @@
+Exercise: Draw pattern
+----------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def draw_square(sz):
+    for i in range(4):
+        for j in range(4):
+            turtle.forward(sz/2)
+            turtle.left(90)
+        turtle.left(90)
+
+def draw_shape(n, sz):
+    for i in range(n):
+        draw_square(sz)
+        turtle.left(360/n)
+
+turtle_window()
+draw_shape(21, 100)
