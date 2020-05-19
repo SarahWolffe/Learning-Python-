@@ -1,0 +1,25 @@
+Exercise: Modify the turtle bar chart program so that the pen is up for the small gaps between each bar.
+--------------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+turtle.Turtle()       # Create tess and set some attributes
+turtle.color("blue", "red")
+    turtle.right(90)
+    turtle.forward(height)
+    turtle.left(90)
+    turtle.end_fill()     # Added this line
+    turtle.penup()
+    turtle.forward(10)
+
+xs = [48,117,200,240,160,260,220]
+
+for a in xs:
+    draw_bar(a)
+
+wn.mainloop()
