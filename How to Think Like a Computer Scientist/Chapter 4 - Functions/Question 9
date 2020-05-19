@@ -1,0 +1,19 @@
+Exercise: Write a void function to draw a star, where the length of each side is 100 units.
+(Hint: You should turn the turtle by 144 degrees at each point.)
+-----------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def star(length, angle):
+    for i in range(5):
+        turtle.forward(length)
+        turtle.left(angle)
+
+star(100, 144)
+
