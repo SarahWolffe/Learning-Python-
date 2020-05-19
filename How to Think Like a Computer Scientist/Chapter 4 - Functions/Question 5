@@ -1,0 +1,19 @@
+Solution: 
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def draw_spiral(length, poly_sides, n):
+    for x in range(n):
+        angle = 360/ poly_sides
+        for i in range(poly_sides):
+            turtle.right(angle)
+            turtle.forward(length)
+            length = length + (length/30)
+        #length = length + (length/30)
+
+turtle_window()
+draw_spiral(10, 4, 10)
