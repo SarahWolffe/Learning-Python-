@@ -1,0 +1,22 @@
+Exercises: Assume the days of the week are numbered 0,1,2,3,4,5,6 from Sunday to Saturday.
+Write a function which is given the day number, and it returns the day name (a string).
+
+def weekdays(number):
+    if number == 0:
+        print('Monday')
+    elif number == 1:
+        print('Tuesday')
+    elif number == 2:
+        print('Wednesday')
+    elif number == 3:
+        print('Thursday')
+    elif number == 4:
+        print('Friday')
+    elif number == 5:
+        print('Saturday')
+    else:
+        number == 6
+        print('Sunday')
+
+weekdays(1)
+
