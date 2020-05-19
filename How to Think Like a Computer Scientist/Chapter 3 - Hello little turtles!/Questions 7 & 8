@@ -1,0 +1,39 @@
+Exercises: 
+
+7. A drunk pirate makes a random turn and then takes 100 steps forward, makes another random turn, takes another 100 steps, turns another random amount, etc.
+A social science student records the angle of each turn before the next 100 steps are taken. Her experimental data is [160, -43, 270, -97, -43, 200, -940, 17, -86].
+(Positive angles are counter-clockwise.) Use a turtle to draw the path taken by our drunk friend.
+
+8. Enhance your program above to also tell us what the drunk pirate’s heading is after he has finished stumbling around. (Assume he begins at heading 0).
+---------------------------------------------------------------------------------------------------------------------------------------
+Combined solutions: 
+
+import turtle # activates the turtle module
+window = turtle.Screen()
+window.title('Drunk Pirate Exercise')
+drunk_pirate = turtle.Turtle()
+drunk_pirate.left(160)
+drunk_pirate.forward(100)
+drunk_pirate.right(43)
+drunk_pirate.forward(100)
+drunk_pirate.left(270)
+drunk_pirate.forward(100)
+drunk_pirate.right(97)
+drunk_pirate.forward(100)
+drunk_pirate.right(43)
+drunk_pirate.forward(100)
+drunk_pirate.left(200)
+drunk_pirate.forward(100)
+drunk_pirate.right(940)
+drunk_pirate.forward(100)
+drunk_pirate.left(17)
+drunk_pirate.forward(100)
+drunk_pirate.right(86)
+drunk_pirate.forward(100)
+total = abs(160 - 43 + 270 - 97 - 43 + 200 - 940 + 17 - 86)
+# abs() is a built-in function in Python programming language which gives a positive value of any number in return. It means it converts any negative number into a positive number and positive numbers remain unchanged. If a given argument is a complex number then the abs() function returns its magnitude as a floating point number of a given complex number.
+full_turns = total // 360
+value = full_turns * 360
+final_angle = total - value
+print(final_angle)
+
