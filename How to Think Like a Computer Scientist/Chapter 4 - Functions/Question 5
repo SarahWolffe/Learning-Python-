@@ -17,3 +17,22 @@ def draw_spiral(length, poly_sides, n):
 
 turtle_window()
 draw_spiral(10, 4, 10)
+
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def draw_spiral(length, poly_sides, n):
+    for x in range(n):
+        for i in range(poly_sides):
+            turtle.right(88)
+            turtle.forward(length)
+            length = length + (length/30)
+        #length = length + (length/30)
+
+turtle_window()
+draw_spiral(20, 4, 50)
+
