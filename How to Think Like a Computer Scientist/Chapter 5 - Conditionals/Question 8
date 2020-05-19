@@ -1,0 +1,41 @@
+Exercises: Modify the turtle bar chart program so that the bar for any value of 200 or more is filled with red,
+values between [100 and 200) are filled with yellow, and bars representing values less than 100 are filled with green.
+----------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+wn = turtle.Screen()         # Set up the window and its attributes
+wn.bgcolor("lightgreen")
+
+turtle.Turtle()       # Create tess and set some attributes
+turtle.pensize(3)
+
+def draw_bar(height):
+    if height >= 200:
+        turtle.color("blue", "red")
+    elif height >= 100 and height < 200:
+        turtle.color("blue", "yellow")
+    else:
+        turtle.color("blue", "green")
+    turtle.pendown()
+    turtle.begin_fill()           # Added this line
+    turtle.left(90)
+    turtle.forward(height)
+    turtle.write("  "+ str(height))
+    turtle.right(90)
+    turtle.forward(40)
+    turtle.right(90)
+    turtle.forward(height)
+    turtle.left(90)
+    turtle.end_fill()     # Added this line
+    turtle.penup()
+    turtle.forward(10)
+
+xs = [48,117,200,240,160,260,220]
+
+for a in xs:
+    draw_bar(a)
+
+wn.mainloop()
