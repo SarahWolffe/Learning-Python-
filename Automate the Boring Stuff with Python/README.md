@@ -15,6 +15,7 @@ Chapter 4: Lists - Three coding exercises (practice projects: Comma Code, Coin F
  
  
 Chapter 5: Dictionaries and Structuring Data - Three coding exercises (practice projects: Chess Dictionary Validator, Fantasy Game
+           
            Inventory, List to Dictionary Function for Fantasy Game Inventory
  
  
