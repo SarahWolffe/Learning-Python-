@@ -1,0 +1,11 @@
+Exercise: Write a program to draw a star
+-----------------------------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+turtle.Screen()
+turtle.Turtle()
+for i in range(5):
+    turtle.right(216)
+    turtle.forward(200)
