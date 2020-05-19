@@ -1,0 +1,19 @@
+Exercise: Write a void function draw_poly(t, n, sz) which makes a turtle draw a regular polygon.
+When called with draw_poly(tess, 8, 50), it will draw an octogan
+-------------------------------------------------------------------------------------------------
+
+Solution: 
+
+import turtle
+
+def turtle_window():
+        turtle.Screen()
+        turtle.Turtle()
+
+def draw_poly(t, n, sz):
+    for i in range(n):
+        turtle.forward(sz)
+        turtle.left(360/n)
+
+tess = turtle.Turtle()
+draw_poly(tess, 8, 50)
