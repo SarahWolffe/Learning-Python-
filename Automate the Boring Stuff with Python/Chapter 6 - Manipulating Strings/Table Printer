@@ -23,3 +23,21 @@ and so on. You can then find the largest value in the colWidths list to find out
 
 Solution: 
 
+tableData = [['apples', 'oranges', 'cherries', 'banana'],
+             ['Alice', 'Bob', 'Carol', 'David'],
+             ['dogs', 'cats', 'moose', 'goose']]
+
+def printTable(tableData):
+    y = 0
+    for i in range(len(tableData[0])):
+        x = 0
+        for i in tableData:
+            z = tableData[x][y].rjust(10)
+            print(z, end='')
+            x = x + 1
+        y = y + 1
+        print('\n')
+
+printTable(tableData)
+
+
