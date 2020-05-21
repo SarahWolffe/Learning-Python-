@@ -9,3 +9,39 @@ This function should detect when a bug has resulted in an improper chess board.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Solution: 
+
+d1ct = {'1h': 'bking', '6c': 'wqueen', '2g': 'bbishop', '5h': 'bqueen', '8g': 'wking', '7d':'bpawn', '1h': 'wpawn'} # example Chess Board
+
+def isValidChessBoard(d1ct):
+    # check for number of pieces
+    pieces = d1ct.values()
+    if len(pieces) > 16:
+        return 'Invalid Chess Board. You must have at most 16 pieces'
+    # check for number of pawns
+    pieces_as_list = list(pieces)
+    if (pieces_as_list.count('wpawn') > 8) or (pieces_as_list.count('bpawn') > 8):
+        return 'Invalid Chess Board. You cannot have more than 8 black or white pawns'
+    # check for exactly one black king and exactly one white king
+    if (pieces_as_list.count('bking')) != 1 and (pieces_as_list.count('wking') != 1):
+        return 'Invalid Chess Board. You must have exactly one black king and exactly one white king'
+    # check all pieces are on a valid space from '1a' to '8h'; that is, a piece can’t be on space '9z'
+    # isolate the keys in a new list of string values
+    space = list(d1ct.keys())
+    for i in space:
+        # find the number
+        x = len(i) # find the length of the number plus the letter 
+        y = x - 1 # one less than the length of the list item (subtracting the letter) is the index of the last digit in the number 
+        number = int(i[0:y]) # number is all digits from the first to second to last index  
+        # check the number is less than or equal to 8
+        if number > 8:
+            return 'Invalid Chess Board. All pieces must be on a valid space from \'1a\' to \'8h\''
+        # find the letter
+        letter = i[1]
+        # check letter is less than or equal to h
+        if letter > 'h': 
+            return 'Invalid Chess Board. All pieces must be on a valid space from \'1a\' to \'8h\''
+    else: 
+        print('Your Chess Board is valid. Enjoy your game!')
+
+isValidChessBoard(d1ct)
+
