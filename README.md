@@ -20,3 +20,5 @@ Link: https://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3_latest/index
 These resources do not provide their own answers for the programming exercises, and there are many ways to address the same exercise. I hope that others benefit from taking a look at how I addressed the exercises. The folders here are a work in progress. As I make my way through more chapters, I hope to keep updating their contents. As I discover further useful learning resources with exercises, I will add folders which represent them and contain my answers.  
 
 A list of free Python-learning resources can be found here: https://blog.finxter.com/free-python-books/
+
+I have found 'Learn Python the Hard Way' (https://learncodethehardway.org/python/), 'Programiz' (https://www.programiz.com/) and 'TechBeamers' (https://www.techbeamers.com/) to be useful resources in complimenting and clarifying concepts discussed by these main texts.
